@@ -2,25 +2,25 @@ const bengaliDigits = ["০", "১", "২", "৩", "৪", "৫", "৬", "৭", "
 
 export function convertToBengaliNumerals(num: number | string): string {
   const numStr = typeof num === "number" ? num.toString() : num;
-  return numStr.replace(/\d/g, (digit) => bengaliDigits[parseInt(digit)]);
+  return numStr.replace(/\d/g, (digit) => bengaliDigits[parseInt(digit, 10)]);
 }
 
 export function convertToEnglishNumerals(numStr: string): number {
   const bengaliToEnglish: Record<string, string> = {
     "০": "0",
     "১": "1",
-    "२": "2",
-    "३": "3",
-    "४": "4",
-    "५": "5",
-    "६": "6",
-    "७": "7",
-    "८": "8",
-    "९": "9",
+    "২": "2",
+    "৩": "3",
+    "৪": "4",
+    "৫": "5",
+    "৬": "6",
+    "৭": "7",
+    "৮": "8",
+    "৯": "9",
   };
 
   const converted = numStr.replace(
-    /[০-९]/g,
+    /[০-৯]/g,
     (digit) => bengaliToEnglish[digit] || digit,
   );
   return parseInt(converted, 10);
