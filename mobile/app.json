@@ -1,0 +1,20 @@
+{
+  "expo": {
+    "name": "Hamba",
+    "slug": "hamba",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "resizeMode": "contain",
+      "backgroundColor": "#f8fafc"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.arickahamed.hamba"
+    },
+    "android": {
+      "package": "com.arickahamed.hamba"
+    }
+  }
+}
